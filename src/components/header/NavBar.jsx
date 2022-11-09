@@ -9,6 +9,7 @@ import {
     DrawerCloseButton,
     useDisclosure,
   } from '@chakra-ui/react'
+import { NavLink } from 'react-router-dom'
 
 const NavBar = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -16,14 +17,13 @@ const NavBar = () => {
   return (
     <div className="lg:w-[80vw] w-[90vw] mx-auto flex justify-between items-center mt-[2vh]">
        <Logo /> 
-        <div className="lg:flex hidden justify-between text-[14px] font-[Montserrat] items-center space-x-14">
-            <span>Home</span>
-            <span>Tech</span>
-            <span>Politics</span>
-            <span>Entertainment</span>
-            <span>Life</span>
-            <span>NFTs</span>
-
+        <div className="lg:flex md:flex hidden justify-between text-[14px] font-[Montserrat] items-center space-x-14">
+            <NavLink to="/" className="hover:text-amber-500">Home</NavLink>
+            <NavLink to="/tech" className="hover:text-amber-500">Tech</NavLink>
+            <NavLink to="/politics" className="hover:text-amber-500">Politics</NavLink>
+            <NavLink to="/entertainment" className="hover:text-amber-500">Entertainment</NavLink>
+            <NavLink to="/life" className="hover:text-amber-500">Life</NavLink>
+            <NavLink to="/nfts" className="hover:text-amber-500">NFTs</NavLink>
         </div> 
         <div className="lg:flex hidden space-x-6 text-[14px] items-center">
             <FaTwitter />
@@ -54,12 +54,12 @@ const NavBar = () => {
                 </div>
                 <DrawerBody>
                     <div className="w-[90vw] mx-auto gap-x-10 gap-y-6 font-mono text-gray-300 text-[15px] grid grid-cols-3 mb-10">
-                        <span>Home</span>
-                        <span>Tech</span>
-                        <span>Politics</span>
-                        <span>NFTs</span>
-                        <span>Life</span>
-                        <span>Entertainment</span>
+                        <NavLink to="/" className="hover:text-amber-500">Home</NavLink>
+                        <NavLink to="/tech" className="hover:text-amber-500">Tech</NavLink>
+                        <NavLink to="/politics" className="hover:text-amber-500">Politics</NavLink>
+                        <NavLink to="/entertainment" className="hover:text-amber-500">Entertainment</NavLink>
+                        <NavLink to="/life" className="hover:text-amber-500">Life</NavLink>
+                        <NavLink to="/nfts" className="hover:text-amber-500">NFTs</NavLink>
                     </div>
                 </DrawerBody>
                 </DrawerContent>
